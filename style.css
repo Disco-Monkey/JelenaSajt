@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #68181f;
+    color: #efdbbf;
+    line-height: 1.6;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    background-color: #121211;
+    color: white;
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 1rem;
+    color: #efdbbf;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+section {
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.panelCard {
+    background: #121211;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: #efdbbf;
+    padding: 2rem;
+}
+.panelCard {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.panelCard:hover {
+    transform: scale(1.02);
+}
+/*
+.panelCard img {
+    width: 45%;
+    height: auto;
+}*/
+.panelCard img {
+    width: 70%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 1rem auto;
+} 
+.panelCard h3 {
+    position: relative;
+    top: -10%;
+    left: -10%;
+}
+
+.panelCard p {
+    position: relative;
+    top: 10%;
+    left: -8%;
+}
+
+.contact a{
+    color: rgb(252, 187, 127);
+}
+.contact img{
+    width: 5%;
+    min-width: 86;
+    height: auto;    
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #121211;
+    color: #efdbbf;
+}
+.footer {
+    background: #121211;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/*
+    GALERIJA
+*/
+
+h1 {
+    text-align: center;
+    padding: 1.5rem 0 0.5rem;
+    font-size: 2rem;
+    color: #efdbbf;
+}
+
+.galleryH{
+   text-align: center;
+   padding-top: 1rem;
+}  
+
+.galleryG {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1000px; /* tighter so columns break earlier */
+    margin: 0 auto;
+}
+
+.galleryG img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.galleryG img:hover {
+    transform: scale(1.05);
+}
+
+/* Fullscreen overlay */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+}
+
+.lightbox img {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+.lightbox .controls {
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .galleryG {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .galleryG {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        padding: 0.5rem;
+    }
+}
+/*about*/
+
+.about {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
