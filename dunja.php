@@ -2,7 +2,7 @@
 
 $imageFolder = 'pics/GalleryDu';
 
-$images = glob($imageFolder . '/*.{jpg,jpeg,png,gif,webp,JPG}', GLOB_BRACE);
+$images = glob($imageFolder . '/*.{jpg,jpeg,png,gif,webp,JPG,ARW}', GLOB_BRACE);
 include 'headerG.php'; 
 ?>
 
